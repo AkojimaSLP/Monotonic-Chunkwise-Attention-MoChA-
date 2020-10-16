@@ -250,6 +250,10 @@ if __name__ == '__main__':
     y = torch.LongTensor(BATCH_SIZE, num_of_step).random_(1, NUM_CLASSES)
     y[:, 0] = 0 # <sos>
     
+    x = x.to(DEVICE)
+    y = y.to(DEVICE)
+    len_y = len_y.to(DEVICE)
+    
     # ==================================================================
     # feed data (forward)
     # ==================================================================    
